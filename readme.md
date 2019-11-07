@@ -119,3 +119,44 @@
 
 
 - 내가 자주 접속하는 사이트들 중에 우리가 좀전에 배운 형태로 되어 있는 사이트를 찾아서 필요한 정보들만 뽑아서 화면에 출력하세요.
+
+  - 다음 영화
+  - 카카오 페이지(웹툰, 기다무)
+  - 서울시 공공데이터
+  - 아프리카 tv
+  - 네이버 지도(경로 데이터)
+
+  
+
+- 플라스크 설치하기
+
+  ```command
+  > pip install flask
+  ```
+
+  - 환경 설정
+
+    ```command
+    > $env:FLASK_ENV="development"
+    > $env:FLASk_DEBUG="True"
+    ```
+
+
+
+- 플라스크 서버 돌리기
+
+  ```python
+  # 기본내용
+  from flask import Flask, escape, request
+  import requests
+  
+  app = Flask(__name__)
+  if __name__ == '__main__':
+      app.run(debug=True)
+      
+  @app.route('/')
+  def index():
+      return { 'hello': 'world'}
+  ```
+
+  
